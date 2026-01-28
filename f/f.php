@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ชญาณี รุ่งนภากานต์ (ตังเม)</title>
+</head>
+
+<body>
+<h1>ชญาณี รุ่งนภากานต์ (ตังเม) - do .. while</h1>
+
+<?php
+$a = 1;
+do {
+	echo "$a : ชญาณี รุ่งนภากานต์ (ตังเม) <br />" ;
+	echo "<img src='1.jpg' width='200'> <hr>";
+	$a++;
+} while( $a<=10);
+?>
+
+</body>
+</html>
