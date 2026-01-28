@@ -23,6 +23,7 @@ include_once("connectdb.php");
 $sql = "SELECT * FROM `popsupermarket`";
 $rs = mysqli_query($conn, $sql);
 while ($data = mysqli_fetch_array($rs)) {
+    //aaa
 ?>
 <tr>
 	<td><?php echo $data['p_order_id'];?></td>
