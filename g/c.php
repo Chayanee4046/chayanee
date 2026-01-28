@@ -30,8 +30,8 @@
                         <th>ประเภทสินค้า</th>
                         <th>วันที่</th>
                         <th>ประเทศ</th>
-                        <th class="text-end">จำนวนเงิน</th>
-                        <th class="text-center">รูปภาพ</th>
+                        <th >จำนวนเงิน</th>
+                        <th >รูปภาพ</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -50,7 +50,7 @@
                         <td align="right"><?php echo number_format($data['p_amount'], 2);?></td>
                         <td align="center">
                             <img src="images/<?php echo $data['p_product_name'];?>.jpg" 
-                                 width="50" height="50"/>
+                                 width="50" height="50">
                         </td>
                     </tr>
                 <?php 
@@ -75,7 +75,7 @@
                 "url": "//cdn.datatables.net/plug-ins/1.13.7/i18n/th.json" // เมนูภาษาไทย
             },
             "pageLength": 10,
-            "order": [[ 0, "desc" ]] // เรียงจาก Order ID ล่าสุด
+            "order": [[ 0,"desc" ]] // เรียงจาก Order ID ล่าสุด
         });
     });
 </script>
