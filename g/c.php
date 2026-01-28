@@ -51,7 +51,6 @@
                         <td align="center">
                             <img src="images/<?php echo $data['p_product_name'];?>.jpg" 
                                  width="50" height="50" 
-                                 onerror="this.src='https://via.placeholder.com/50?text=No+Img'">
                         </td>
                     </tr>
                 <?php 
