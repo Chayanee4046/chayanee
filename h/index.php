@@ -20,7 +20,16 @@ is(isset($_POST['Submit'])){
     $rs = mysqli_query($conn,$sql);
     $num = mysqli_num_rows($rs);
 
-    echo $num ;
+    if ($num == 1) {
+        $data = mysqli_ftch_array($rs);
+        $_SESSION['aid'] = $data['a_id'];
+        $_SESSION['aname'] = $data['a_name'];
+    } else {
+        echo "<script>";
+        echo "alert('Username หรือ Password ไม่ถูกต้อง');";
+        echo "</script>";
+    }
+
 }
 ?>
 
