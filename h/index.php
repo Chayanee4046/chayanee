@@ -1,6 +1,7 @@
 <?php
     session_start();
 ?>
+
 <!doctype html>
 <html>
 <head>
@@ -28,7 +29,7 @@ if(isset($_POST['Submit'])){
         $_SESSION['aid'] = $data['a_id'];
         $_SESSION['aname'] = $data['a_name'];
         echo "<script>";
-        echo "window.location='index2.php;'";
+        echo "window.location='index2.php';";
         echo "</script>";
     } else {
         echo "<script>";

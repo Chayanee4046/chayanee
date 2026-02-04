@@ -1,5 +1,9 @@
 <?php
     session_start();
+    if(empty($_SESSION['aid'])){
+        echo "Access Denied";
+        exit;
+    }
 ?>
 <!doctype html>
 <html>
