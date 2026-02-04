@@ -21,7 +21,7 @@ if(isset($_POST['Submit'])){
     $num = mysqli_num_rows($rs);
 
     if ($num == 1) {
-        $data = mysqli_ftch_array($rs);
+        $data = mysqli_fetch_array($rs);
         $_SESSION['aid'] = $data['a_id'];
         $_SESSION['aname'] = $data['a_name'];
     } else {
