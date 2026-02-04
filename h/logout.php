@@ -6,5 +6,5 @@
 
     echo "<script>";
     echo "window.location='index2.php;'";
-    echo "</script>";"
+    echo "</script>";
 ?>
