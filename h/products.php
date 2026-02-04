@@ -5,11 +5,11 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>หน้าหลักแอดมิน - ชญาณี</title>
+<title>จัดการสินค้า - ชญาณี</title>
 </head>
 
 <body>
-<h1>หน้าหลักแอดมิน - ชญาณี</h1>
+<h1>จัดการสินค้า - ชญาณี</h1>
 
 <?php echo "แอดมิน:".$_SESSION['aname']; ?> <br>
 
