@@ -2,6 +2,7 @@
     session_start();
     if(empty($_SESSION['aid'])){
         echo "Access Denied";
+        echo "<meta http-equiv='refresh' content='4; url=index.php'>";
         exit;
     }
 ?>
@@ -15,7 +16,7 @@
 <body>
 <h1>หน้าหลักแอดมิน - ชญาณี</h1>
 
-<?php echo "แอดมิน:".$_SESSION['a_name']; ?> <br>
+<?php echo "แอดมิน:".$_SESSION['aname']; ?> <br>
 
 <ul>
     <a href="products.php"><li>จัดการสินค้า</li></a>
