@@ -16,7 +16,7 @@ Password <input type="password" name="apwd" required> <br>
 <?php
 is(isset($_POST['Submit'])){
     include_once("connectdb.php");
-    $sql = "SELECT * FROM admin WHERE a_username='{$_POST['auser']}' AND a_password='xxx' LIMIT 1";
+    $sql = "SELECT * FROM admin WHERE a_username='{$_POST['auser']}' AND a_password='{$_POST['apwd']}' LIMIT 1";
     $rs = mysqli_query($conn,$sql);
     $num = mysqli_num_rows($rs);
 
