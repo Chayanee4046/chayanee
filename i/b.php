@@ -8,17 +8,38 @@
 <body>
 <h1>งาน i -- ชญาณี รุ่งนภากานต์(ตังเม)</h1>
 
-<form method="post" action="">
-    ชื่อภาค <input type="text" name="rname" autofocus required>
+<form method="post" action="" enctype="multipart/form-data">
+    ชื่อจังหวัด <input type="text" name="pname" autofocus required><br>
+    รูปภาพ <input type="file" name="pimage" required> <br>
+
+    ภาค
+    <select name="rid">
+    <?php
+include_once("connectdb.php");
+$sql3 = "SELECT * FROM `provinces`";
+$rs3 = mysqli_query($conn, $sql3);
+while ($data3 = mysqli_fetch_array($rs3)){
+?> 
+        <option value="<?php echo $data3['r_id']; ?>"><?php echo $data3['r_name']; ?></option>
+<?php } ?>
+    </select>
+    <br>
+
     <button type="submit" name="Submit">บันทึก</button>
 </form> <br><br>
 
 <?php
 if(isset($_POST['Submit'])) {
     include_once("connectdb.php");
-    $rname = $_POST['rname'];
-    $sql2 = "INSERT INTO `regions` (`r_id`,`r_name`) VALUES (NULL,'{$rname}')";
+
+    $pname = $_POST['pname'];
+    $ext = pathinfo($_FILES['pimage']['name'],PATHINFO_EXTENSION);
+    $rid = $_POST['rid'];
+
+    $sql2 = "INSERT INTO provinces` VALUES (NULL,'{$pname}','{$ext}','{$rid}')";
     mysqli_query($conn,$sql2) or die ("เพิ่มข้อมูลไม่ได้");
+    $pid = mysqli_insert_id($conn);
+    copy($_FILES['pimage']['tmp_name'], "images/".$pid.".".$ext);
 }
 ?>
 
