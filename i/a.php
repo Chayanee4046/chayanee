@@ -5,11 +5,20 @@
 <title>ชญาณี รุ่งนภากานต์(ตังเม)</title>
 </head>
 
-
-
-
 <body>
 <h1>งาน i -- ชญาณี รุ่งนภากานต์(ตังเม)</h1>
+
+<?php
+include_once("connectdb.php");
+$sql = "SELECT * FROM 'regions'";
+$rs = mysqli_query($conn, $sql);
+while ($data = misqli_fetch_array($rs)){
+    echo $data['r_id']. "<br>";
+    echo $data['r_name']. "<hr>"
+}
+
+mysqli_close($conn);
+?>
 
 </body>
 </html>
