@@ -50,7 +50,7 @@ if(isset($_POST['Submit'])) {
         <th>รูป</th>
         <th>ลบ</th>
     </tr>  
-<?phpห
+<?php
 include_once("connectdb.php");
 $sql = "SELECT * FROM `provinces`";
 $rs = mysqli_query($conn, $sql);
