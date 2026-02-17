@@ -74,7 +74,7 @@ while ($data = mysqli_fetch_array($rs)){
         <td><?php echo $data['p_name']; ?></td>
         <td><?php echo $data['r_name']; ?></td>
         <td><img src="images/<?php echo $data['p_id']; ?>.<?php echo $data['p_ext']; ?>" width="80"></td>
-        <td width="80" align="center"><a href="delete_province.php?id=<?php echo $data['p_id']; ?>$ext=<?php echo $data['p_ext'];?>"onClick="return confirm('ยืนยันการลบ?');"><img src="images/delete.jpg" width="80"></a></td>
+        <td width="80" align="center"><a href="delete_provinces.php?id=<?php echo $data['p_id']; ?>$ext=<?php echo $data['p_ext'];?>"onClick="return confirm('ยืนยันการลบ?');"><img src="images/delete.jpg" width="80"></a></td>
     </tr>
 <?php } ?>
 </table>
